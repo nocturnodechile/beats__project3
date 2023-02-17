@@ -1,0 +1,99 @@
+.hero {
+  background-color: $grey;
+  height: 100vh;
+  min-height: rem(650px);
+  color: #292929;
+  position: relative;
+
+  &:after {
+    position: absolute;
+    bottom: rem(-21px);
+    right: 15%;
+    content: url("../img/rectangle.svg");
+  }
+
+
+// нужна ли эта часть?
+
+  &__tablet_image {
+  display: none; 
+
+    @include tablets {
+      display: flex;
+      max-width: 40%;
+      max-height: 40%;
+    }
+  }
+}
+
+.hero__title-section {
+  width: 40%;
+
+  @include tablets {
+    width: 100%;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    &:before {
+      content: '';
+      //content: url("../img/headphones.png");
+      width: rem(323px);
+      height: rem(323px);
+      background: url("../img/headphones.png") center center / contain no-repeat;
+      margin-bottom: rem(16px);
+      // transform: scale(.5);
+    }
+  }
+}
+
+.hero__container {
+
+  background: url("../img/headphones.png") right center / 50% auto no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  padding: rem(24px) 0 rem(70px);
+
+  @include tablets {
+    background: none;
+  }
+}
+
+.hero__main-title {
+  font-size: rem(48px);
+  line-height: 1.1;
+  font-weight: bold;
+  margin-bottom: rem(20px);
+  text-transform: uppercase;
+
+  @include tablets {
+  padding: 0 5%;
+  }
+}
+
+.hero__title_description {
+  font-size: rem(21px);
+  margin-bottom: rem(36px);
+  padding-right: 10%;
+  font-family: 'Alegreya Sans';
+
+  @include tablets {
+    padding: 0 25%;
+  }
+
+  @include phones {
+    padding: 0 10%;
+  }
+}
+
+.hero__icon-section {
+
+  @include tablets {
+    display: none;
+  }
+}

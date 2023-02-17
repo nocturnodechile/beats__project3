@@ -1,0 +1,29 @@
+.colors {
+
+  display: flex;
+	height: 100%;
+	justify-content: space-between;
+
+    &-section{
+	  background: url('../img/girl.png') center center / cover no-repeat;
+	  justify-content: flex-start;
+	  padding: 0;
+	  width: 100%;
+	  overflow: hidden;
+	  position: relative;
+  }
+
+  &__title{
+    color: #FFFFFF;
+    text-align: left;
+    padding-top: 8%;
+    padding-left: 8%;
+    flex: 1 0 30%;
+  
+  
+    @include tablets {
+      padding-top: 7%;
+      padding-left: 6%;
+    }
+  }
+}

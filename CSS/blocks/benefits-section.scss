@@ -1,0 +1,10 @@
+.benefits-section {
+  position: relative;
+
+  &:after {
+    position: absolute;
+    bottom: rem(-21px);
+    left: 10%;
+    content: url("../img/red_triangle.svg");
+  }
+}

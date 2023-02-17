@@ -1,0 +1,80 @@
+.spec {
+
+	position: relative;
+	display: inline-block;
+	margin-bottom: rem(25px);
+
+	@include tablets {
+		display: none;
+	}
+
+	&:hover{
+		.spec__list{
+			transition: top .1s, opacity .5s;
+			top: 0;
+			opacity: 1;
+		}
+		.spec__btn{
+			background-color: #6e6e6e;
+		}
+	}
+
+  &__list {
+    width: rem(273px);
+    padding: rem(30px);
+    position: absolute;
+    top: -100vh;
+    left: 91px;
+    background: #fff;
+    opacity: 0;
+    box-shadow: 4px 4px 40px rgba(0, 0, 0, 0.06);
+    border-radius: 4px;
+    color: #000;
+  }
+
+  &__item {
+
+    display: flex;
+    margin-bottom: rem(28px);
+    line-height: rem(24px);
+
+    &:last-child{
+      margin-bottom: 0;
+    }
+  }
+
+  &__prop {
+
+    flex: 1;
+    min-height: rem(24px);
+    padding-left: rem(40px);
+    
+    &_bt{
+      background: url('../img/bluetooth.svg') left center / 24px 24px no-repeat;
+    }
+    &_range{
+      background: url('../img/faraway.svg') left center / 24px 24px no-repeat;
+    }
+    &_charger{
+      background: url('../img/charger.svg') left center / 24px 24px no-repeat;
+    }
+    &_weight{
+      background: url('../img/kg.svg') left center / 24px 24px no-repeat;
+    }
+    &_warranty{
+      background: url('../img/patent.svg') left center / 24px 24px no-repeat;
+    }
+  }
+
+  &__btn {
+
+	display: flex;
+	width: 91px;
+	height: 91px;
+	background: #9a9a9a url('../img/gear1.svg') center / 42px 42px no-repeat;
+	border-radius: 4px;
+	justify-content: center;
+	align-items: center;
+	transition: background-color .3s;
+  }
+}

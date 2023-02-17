@@ -1,0 +1,40 @@
+.team {
+  margin-top: 10%;
+
+  &-section__container {
+	height: 100%;
+
+	  @include tablets {
+		height: auto;
+	  }
+  }
+
+  &__title {
+    margin-bottom: rem(53px);
+
+    @include tablets {
+      margin-bottom: rem(33px);
+    }
+  }
+
+  &__list {
+
+    display: flex;
+    justify-content: center;
+    margin: 0 -rem(10px);
+
+    @include tablets {
+      flex-direction: column;
+    }
+  }
+
+  &team__item {
+    width: 25%;
+    margin-bottom: 20px;
+  
+    @include tablets {
+      width: 100%;
+      margin-bottom: 15px;
+    }
+  }
+}
